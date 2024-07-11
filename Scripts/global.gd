@@ -1,7 +1,7 @@
 extends Node
 
-# Global values that are not reset during scene transtions 
-# Script is loaded immediately upon game load
-
+var ySensitivity : float = 0.3
+var xSensitivity : float = 0.3
+# Runs when game launches
 func _ready():
-	pass # Runs once when the game first loads up
+	pass

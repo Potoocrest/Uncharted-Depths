@@ -1,2 +1,4 @@
 res://Scenes/debug-scene.tscn
-res://Scripts/Global.gd
+res://Scripts/Player.gd
+res://Scripts/global.gd
+res://Scripts/player.gd

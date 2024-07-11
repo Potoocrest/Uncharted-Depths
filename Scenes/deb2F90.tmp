@@ -40,9 +40,6 @@ sky = SubResource("Sky_agm30")
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 script = ExtResource("1_vwbau")
 
 [node name="PlayerCollider" type="CollisionShape3D" parent="Player"]
