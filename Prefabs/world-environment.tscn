@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cujtiyoenyvin"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pdjbh"]
+sky_top_color = Color(0.0745098, 0.482353, 0.65098, 1)
+sky_horizon_color = Color(0, 0.270588, 0.356863, 1)
+sky_curve = 1.11964
+sky_cover_modulate = Color(0.843137, 0.305882, 1, 1)
+ground_bottom_color = Color(0.00392157, 0.141176, 0.211765, 1)
+ground_horizon_color = Color(0, 0.270588, 0.356863, 1)
+
+[sub_resource type="Sky" id="Sky_agm30"]
+sky_material = SubResource("ProceduralSkyMaterial_pdjbh")
+
+[sub_resource type="Environment" id="Environment_0klpp"]
+background_mode = 2
+sky = SubResource("Sky_agm30")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6delg"]
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_0klpp")
+camera_attributes = SubResource("CameraAttributesPractical_6delg")
