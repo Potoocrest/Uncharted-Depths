@@ -1,4 +1,6 @@
 res://Scenes/debug-scene.tscn
-res://Scripts/Player.gd
-res://Scripts/global.gd
+res://Physics/debug-physics-material.tres
 res://Scripts/player.gd
+res://Scripts/global.gd
+res://Scripts/convex-collision-loader.gd
+res://Scripts/concave-collision-loader.gd
