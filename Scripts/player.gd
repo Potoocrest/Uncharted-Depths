@@ -23,10 +23,6 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("switch_cam_mode"):
 		_switch_cam_mode()
-	if Input.is_action_just_pressed("pause") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -34,8 +30,11 @@ func _physics_process(delta):
 		velocity.y -= GRAVITY * (delta/buoyancyMultiplier)
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	if !Input.is_action_pressed("jump") and !is_on_floor() and velocity.y > 0:
+		velocity.y = lerpf(velocity.y, 0, 0.03)
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")

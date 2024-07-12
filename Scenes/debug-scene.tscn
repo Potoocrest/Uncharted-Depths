@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cjldhghbtu8s7"]
+[gd_scene load_steps=18 format=3 uid="uid://cjldhghbtu8s7"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_vwbau"]
 [ext_resource type="Script" path="res://Scripts/Collision-Loaders/convex-collision-loader.gd" id="2_dslyp"]
 [ext_resource type="PackedScene" uid="uid://cujtiyoenyvin" path="res://Prefabs/world-environment.tscn" id="3_6bwmp"]
 [ext_resource type="Script" path="res://Scripts/Collision-Loaders/concave-collision-loader.gd" id="3_8tvtt"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="5_fyorq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8goev"]
 
@@ -143,3 +144,7 @@ transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 0, 0)
 light_color = Color(0.796078, 1, 0.933333, 1)
 shadow_enabled = true
 directional_shadow_mode = 1
+
+[node name="GameManager" type="Node3D" parent="."]
+process_mode = 3
+script = ExtResource("5_fyorq")
